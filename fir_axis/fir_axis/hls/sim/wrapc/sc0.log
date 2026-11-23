@@ -1,7 +1,0 @@
-   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
-   Compiling apatb_fir_axis.cpp
-   Compiling apatb_fir_axis_util.cpp
-   Compiling fir_axis.cpp_pre.cpp.tb.cpp
-   Compiling tb_fir.cpp_pre.cpp.tb.cpp
-   Compiling apatb_fir_axis_ir.ll
-   Generating cosim.tv.exe
