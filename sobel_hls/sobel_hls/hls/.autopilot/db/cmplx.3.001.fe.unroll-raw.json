@@ -1,0 +1,22 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 14,
+    "file": "sobel.cpp",
+    "fileloc": 22,
+    "instructions": 152,
+    "loads": {
+      "G": 3,
+      "L": 2
+    },
+    "memory_accesses": 13,
+    "name": "sobel_hls",
+    "stores": {
+      "G": 2,
+      "L": 2
+    },
+    "total_instructions": 152
+  }
+}

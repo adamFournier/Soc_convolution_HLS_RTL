@@ -1,0 +1,34 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "1 1",
+    "control_depth": 4,
+    "def_use_depth": 11,
+    "file": "sobel.cpp",
+    "fileloc": 22,
+    "instructions": 288,
+    "loads": {
+      "G": 2,
+      "L": 20
+    },
+    "memory_accesses": 68,
+    "name": "sobel_hls",
+    "stores": {
+      "G": 2,
+      "L": 21
+    },
+    "total_instructions": 695
+  },
+  "1": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "sobel.cpp",
+    "fileloc": 15,
+    "instructions": 7,
+    "memory_accesses": 0,
+    "name": "abs_val",
+    "total_instructions": 7
+  }
+}

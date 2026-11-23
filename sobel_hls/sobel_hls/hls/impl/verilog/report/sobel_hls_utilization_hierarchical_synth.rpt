@@ -1,0 +1,33 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Nov 12 00:01:08 2026
+| Host         : OrdiAdamF running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/sobel_hls_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------+-------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|         Instance        |                         Module                        | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------+-------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper            |                                                 (top) |        208 |        192 |      16 |    0 | 162 |      0 |      0 |          0 |
+|   bd_0_i                |                                                  bd_0 |        208 |        192 |      16 |    0 | 162 |      0 |      0 |          0 |
+|     hls_inst            |                                       bd_0_hls_inst_0 |        208 |        192 |      16 |    0 | 162 |      0 |      0 |          0 |
+|       inst              |                             bd_0_hls_inst_0_sobel_hls |        208 |        192 |      16 |    0 | 162 |      0 |      0 |          0 |
+|         (inst)          |                             bd_0_hls_inst_0_sobel_hls |          4 |          4 |       0 |    0 |  93 |      0 |      0 |          0 |
+|         line_buffer_1_U | bd_0_hls_inst_0_sobel_hls_line_buffer_1_RAM_AUTO_1R1W |        111 |        103 |       8 |    0 |   8 |      0 |      0 |          0 |
++-------------------------+-------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

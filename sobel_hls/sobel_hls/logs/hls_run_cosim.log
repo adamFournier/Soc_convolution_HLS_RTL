@@ -1,0 +1,317 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls'.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sobel.cpp' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_sobel.cpp' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/tb_sobel.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=sobel_hls' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xc7z020clg484-1' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling tb_sobel.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sobel_hls.cpp
+   Compiling sobel.cpp_pre.cpp.tb.cpp
+   Compiling apatb_sobel_hls_util.cpp
+   Compiling apatb_sobel_hls_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+255 255 255 255 255 0 
+255 255 255 255 255 0 
+255 255 0 255 255 0 
+255 255 255 255 255 0 
+TEST PASSED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 48
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\sim\verilog>set PATH= 
+
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\sim\verilog>call C:/Xilinx/2025.1/Vivado/bin/xelab xil_defaultlib.apatb_sobel_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj sobel_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./sobel_hls_subsystem  -s sobel_hls  
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_sobel_hls_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj sobel_hls.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./sobel_hls_subsystem -s sobel_hls 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_sobel_hls_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_hls
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls_flow_control_loop_pipe_no_ap_cont.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_hls_flow_control_loop_pipe_no_ap_cont
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls_line_buffer_1_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_hls_line_buffer_1_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls_line_buffer_2_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_hls_line_buffer_2_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sobel_hls_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/sobel_hls_subsystem/sobel_hls_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/adams/Documents/VHDL_projects/Vitis_HLS_FIR/sobel_hls/sobel_hls/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.sobel_hls_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.sobel_hls_line_buffer_1_RAM_AUTO...
+Compiling module xil_defaultlib.sobel_hls_line_buffer_2_RAM_AUTO...
+Compiling module xil_defaultlib.sobel_hls_flow_control_loop_pipe...
+Compiling module xil_defaultlib.sobel_hls_regslice_both
+Compiling module xil_defaultlib.sobel_hls_regslice_both(DataWidt...
+Compiling module xil_defaultlib.sobel_hls
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=11)
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_sobel_hls_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot sobel_hls
+
+****** xsim v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Wed Nov 11 23:54:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sobel_hls/xsim_script.tcl
+# xsim {sobel_hls} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=sobel_hls_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {sobel_hls.tcl}
+Time resolution is 1 ps
+source sobel_hls.tcl
+## run all
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------------------
+Name                                               Type                              Size  Value          
+----------------------------------------------------------------------------------------------------------
+uvm_test_top                                       sobel_hls_test_lib                -     @349           
+  top_env                                          sobel_hls_env                     -     @360           
+    env_master_svr_in_r                            uvm_env                           -     @379           
+      m_agt                                        uvm_agent                         -     @582           
+        drv                                        uvm_driver #(REQ,RSP)             -     @730           
+          rsp_port                                 uvm_analysis_port                 -     @749           
+          seq_item_port                            uvm_seq_item_pull_port            -     @739           
+        mon                                        uvm_monitor                       -     @759           
+          item_collect_port                        uvm_analysis_port                 -     @770           
+        sqr                                        uvm_sequencer                     -     @593           
+          rsp_export                               uvm_analysis_export               -     @602           
+          seq_item_export                          uvm_seq_item_pull_imp             -     @720           
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+    env_slave_svr_out_r                            uvm_env                           -     @392           
+      s_agt                                        uvm_agent                         -     @788           
+        drv                                        uvm_driver #(REQ,RSP)             -     @936           
+          rsp_port                                 uvm_analysis_port                 -     @955           
+          seq_item_port                            uvm_seq_item_pull_port            -     @945           
+        mon                                        uvm_monitor                       -     @965           
+          item_collect_port                        uvm_analysis_port                 -     @976           
+        sqr                                        uvm_sequencer                     -     @799           
+          rsp_export                               uvm_analysis_export               -     @808           
+          seq_item_export                          uvm_seq_item_pull_imp             -     @926           
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+    refm                                           sobel_hls_reference_model         -     @402           
+      trans_num_idx                                integral                          32    'h0            
+    sobel_hls_virtual_sqr                          sobel_hls_virtual_sequencer       -     @444           
+      rsp_export                                   uvm_analysis_export               -     @453           
+      seq_item_export                              uvm_seq_item_pull_imp             -     @571           
+      arbitration_queue                            array                             0     -              
+      lock_queue                                   array                             0     -              
+      num_last_reqs                                integral                          32    'd1            
+      num_last_rsps                                integral                          32    'd1            
+    subsys_mon                                     sobel_hls_subsystem_monitor       -     @415           
+      scbd                                         sobel_hls_scoreboard              -     @1003          
+        refm                                       sobel_hls_reference_model         -     @402           
+          trans_num_idx                            integral                          32    'h0            
+        file_rd_TVOUT_transaction_size             <unknown>                         -     @1013          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          TV_FILE_num                              integral                          32    'h0            
+          HEX_read                                 integral                          32    'h0            
+          DEC_read                                 integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+          TV_FILE_COMPARE                          string                            0     ""             
+          fp_compare                               integral                          32    'hxxxxxxxx     
+        TVOUT_transaction_size_queue               da(integral)                      0     -              
+        file_wr_port_out_r_out_r_TDATA             <unknown>                         -     @1014          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TDATA          integral                          32    'h0            
+        write_section_done_out_r_out_r_TDATA       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TKEEP             <unknown>                         -     @1015          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TKEEP          integral                          32    'h0            
+        write_section_done_out_r_out_r_TKEEP       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TSTRB             <unknown>                         -     @1016          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TSTRB          integral                          32    'h0            
+        write_section_done_out_r_out_r_TSTRB       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TLAST             <unknown>                         -     @1017          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TLAST          integral                          32    'h0            
+        write_section_done_out_r_out_r_TLAST       integral                          32    'h0            
+      svr_master_in_r_imp                          uvm_analysis_imp_svr_master_in_r  -     @424           
+      svr_slave_out_r_imp                          uvm_analysis_imp_svr_slave_out_r  -     @434           
+    env_master_svr_in_r                            uvm_env                           -     @379           
+    env_slave_svr_out_r                            uvm_env                           -     @392           
+    refm                                           sobel_hls_reference_model         -     @402           
+    sobel_hls_virtual_sqr                          sobel_hls_virtual_sequencer       -     @444           
+    sobel_hls_cfg                                  sobel_hls_config                  -     @374           
+      port_in_r_cfg                                svr_config                        -     @375           
+        svr_type                                   svr_inst_type                     32    SVR_MASTER     
+        prt_type                                   svr_protocol_type                 32    AXIS           
+        is_active                                  svr_active_passive_enum           1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum              1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                 32    NORMAL         
+        clatency                                   svr_latency                       -     @376           
+          transfer_latency                         integral                          32    'h0            
+      port_out_r_cfg                               svr_config                        -     @377           
+        svr_type                                   svr_inst_type                     32    SVR_SLAVE      
+        prt_type                                   svr_protocol_type                 32    AXIS           
+        is_active                                  svr_active_passive_enum           1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum              1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                 32    NORMAL         
+        clatency                                   svr_latency                       -     @378           
+          transfer_latency                         integral                          32    'h0            
+      check_ena                                    integral                          32    'h0            
+      cover_ena                                    integral                          32    'h0            
+----------------------------------------------------------------------------------------------------------
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "655000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 715 ns : File "C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 23:54:59 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+255 255 255 255 255 0 
+255 255 255 255 255 0 
+255 255 0 255 255 0 
+255 255 255 255 255 0 
+TEST PASSED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 48
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 7 seconds. Total elapsed time: 150.036 seconds; peak allocated memory: 228.520 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 37s

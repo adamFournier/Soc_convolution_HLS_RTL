@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\fir_axis\\fir_axis.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/11/26 15:22:09",
+ "timestampMillis": "1794406929567",
+ "buildStep": {
+  "cmdId": "8579d617-4a77-4bb4-88f6-0b09ec601962",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\fir_axis\\logs\\fir_axis.steps.log",
+  "commandLine": "C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --csim --config C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\hls_config.cfg --work_dir fir_axis ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\hls_config.cfg",
+   "--work_dir",
+   "fir_axis"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 15:22:09",
+ "timestampMillis": "1794406929568",
+ "status": {
+  "cmdId": "8579d617-4a77-4bb4-88f6-0b09ec601962",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/11/26 15:22:21",
+ "timestampMillis": "1794406941487",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\fir_axis.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/11/26 15:22:21",
+ "timestampMillis": "1794406941488",
+ "buildStep": {
+  "cmdId": "a61104ad-4530-42fa-9f5a-072eea74a6d7",
+  "name": "",
+  "logFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis\\fir_axis\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\fir_axis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 15:22:21",
+ "timestampMillis": "1794406941490",
+ "status": {
+  "cmdId": "a61104ad-4530-42fa-9f5a-072eea74a6d7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 15:22:31",
+ "timestampMillis": "1794406951250",
+ "status": {
+  "cmdId": "a61104ad-4530-42fa-9f5a-072eea74a6d7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 15:22:31",
+ "timestampMillis": "1794406951430",
+ "status": {
+  "cmdId": "8579d617-4a77-4bb4-88f6-0b09ec601962",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 15:22:31",
+ "timestampMillis": "1794406951431",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 15:22:31",
+ "timestampMillis": "1794406951432",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

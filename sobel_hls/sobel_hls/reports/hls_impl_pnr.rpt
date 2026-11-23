@@ -1,0 +1,520 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Thu Nov 12 00:04:44 +0100 2026
+    * Version:         2025.1 (Build 6135595 on May 21 2025)
+    * Project:         sobel_hls
+    * Solution:        hls (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg484-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  10 ns
+    * C-Synthesis target clock:    10 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       auto
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              194
+FF:               164
+DSP:              0
+BRAM:             0
+URAM:             0
+SRL:              0
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 10.000      |
+| Post-Synthesis | 9.123       |
+| Post-Route     | 9.872       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++---------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                  | LUT | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++---------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                  | 194 | 164 |     |      |      |     |        |      |         |          |        |
+|   (inst)                              | 4   | 95  |     |      |      |     |        |      |         |          |        |
+|   flow_control_loop_pipe_no_ap_cont_U |     |     |     |      |      |     |        |      |         |          |        |
+|   line_buffer_1_U                     | 101 | 8   |     |      |      |     |        |      |         |          |        |
+|   line_buffer_2_U                     |     |     |     |      |      |     |        |      |         |          |        |
+|   regslice_both_in_r_V_data_V_U       |     |     |     |      |      |     |        |      |         |          |        |
+|   regslice_both_out_r_V_data_V_U      |     |     |     |      |      |     |        |      |         |          |        |
+|   regslice_both_out_r_V_keep_V_U      |     |     |     |      |      |     |        |      |         |          |        |
+|   regslice_both_out_r_V_last_V_U      |     |     |     |      |      |     |        |      |         |          |        |
++---------------------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.36%  | OK     |
+| FD                                                        | 50%       | 0.15%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.08%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 0.00%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 0.00%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 10     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 3.04   | OK     |
+| Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+------------------------------------------+-------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                           | ENDPOINT PIN                                    | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                          |                                                 |              |            |                |          DELAY |        DELAY |
++-------+-------+------------------------------------------+-------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.128 | ap_loop_init_pp0_iter1_reg_reg_replica/C | regslice_both_out_r_V_data_V_U/data_p2_reg[4]/D |           12 |         16 |          9.820 |          3.800 |        6.020 |
+| Path2 | 0.146 | ap_loop_init_pp0_iter1_reg_reg_replica/C | regslice_both_out_r_V_data_V_U/data_p2_reg[5]/D |           12 |         16 |          9.845 |          3.825 |        6.020 |
+| Path3 | 0.253 | ap_loop_init_pp0_iter1_reg_reg_replica/C | regslice_both_out_r_V_data_V_U/data_p2_reg[0]/D |           12 |         16 |          9.742 |          3.800 |        5.942 |
+| Path4 | 0.263 | ap_loop_init_pp0_iter1_reg_reg_replica/C | regslice_both_out_r_V_data_V_U/data_p2_reg[1]/D |           12 |         16 |          9.771 |          3.829 |        5.942 |
+| Path5 | 0.265 | ap_loop_init_pp0_iter1_reg_reg_replica/C | regslice_both_out_r_V_data_V_U/data_p2_reg[6]/D |           13 |         16 |          9.682 |          4.273 |        5.409 |
++-------+-------+------------------------------------------+-------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path1 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[4]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[4]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[5]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[5]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[0]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[0]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[1]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[1]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_19                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_5                     | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1_reg[0]_i_2                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_13                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[6]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path2 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[4]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[4]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[5]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[5]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[0]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[0]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[1]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[1]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_19                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_5                     | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1_reg[0]_i_2                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_13                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[6]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path3 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[4]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[4]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[5]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[5]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[0]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[0]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[1]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[1]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_19                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_5                     | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1_reg[0]_i_2                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_13                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[6]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path4 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[4]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[4]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[5]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[5]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[0]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[0]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[1]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[1]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_19                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_5                     | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1_reg[0]_i_2                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_13                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[6]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+    +----------------------------------------------------+----------------------+
+    | Path5 Cells                                        | Primitive Type       |
+    +----------------------------------------------------+----------------------+
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[4]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[4]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[5]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[5]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[0]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[0]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[7]_i_20                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_14                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1[7]_i_16                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[1]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[1]      | FLOP_LATCH.flop.FDRE |
+    | ap_loop_init_pp0_iter1_reg_reg_replica             | FLOP_LATCH.flop.FDRE |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_30     | LUT.others.LUT5      |
+    | regslice_both_out_r_V_data_V_U/data_p1[3]_i_34     | LUT.others.LUT6      |
+    | regslice_both_out_r_V_data_V_U/data_p1_reg[3]_i_20 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_21                    | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1[7]_i_36                    | LUT.others.LUT5      |
+    | line_buffer_1_U/data_p1[7]_i_40                    | LUT.others.LUT6      |
+    | line_buffer_1_U/data_p1_reg[7]_i_18                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_19                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1[3]_i_5                     | LUT.others.LUT3      |
+    | line_buffer_1_U/data_p1_reg[0]_i_2                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_13                | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p1_reg[7]_i_5                 | CARRY.others.CARRY4  |
+    | line_buffer_1_U/data_p2[6]_i_1                     | LUT.others.LUT4      |
+    | regslice_both_out_r_V_data_V_U/data_p2_reg[6]      | FLOP_LATCH.flop.FDRE |
+    +----------------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------------+
+| Report Type              | Report Location                                                   |
++--------------------------+-------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/sobel_hls_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/sobel_hls_failfast_routed.rpt                 |
+| power                    | impl/verilog/report/sobel_hls_power_routed.rpt                    |
+| status                   | impl/verilog/report/sobel_hls_status_routed.rpt                   |
+| timing                   | impl/verilog/report/sobel_hls_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/sobel_hls_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/sobel_hls_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/sobel_hls_utilization_hierarchical_routed.rpt |
++--------------------------+-------------------------------------------------------------------+
+
+

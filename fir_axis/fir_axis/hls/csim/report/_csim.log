@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../tb_fir.cpp in debug mode
+   Compiling ../../../../fir_axis.cpp in debug mode
+   Generating csim.exe
+i=0 attendu=1 obtenu=1
+i=1 attendu=4 obtenu=4
+i=2 attendu=9 obtenu=9
+i=3 attendu=15 obtenu=15
+i=4 attendu=21 obtenu=21
+i=5 attendu=27 obtenu=27
+i=6 attendu=33 obtenu=33
+i=7 attendu=39 obtenu=39
+i=8 attendu=45 obtenu=45
+i=9 attendu=51 obtenu=51
+i=10 attendu=57 obtenu=57
+i=11 attendu=63 obtenu=63
+i=12 attendu=69 obtenu=69
+i=13 attendu=75 obtenu=75
+i=14 attendu=81 obtenu=81
+i=15 attendu=87 obtenu=87
+TEST PASSED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 16
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

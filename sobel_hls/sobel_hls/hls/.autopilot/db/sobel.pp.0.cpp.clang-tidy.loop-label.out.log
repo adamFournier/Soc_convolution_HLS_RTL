@@ -1,0 +1,30 @@
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2387:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2387:5: note: FIX-IT applied suggested code changes
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2401:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2401:5: note: FIX-IT applied suggested code changes
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2415:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:2415:5: note: FIX-IT applied suggested code changes
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:4383:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:4383:7: note: FIX-IT applied suggested code changes
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:10284:5: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+    for (int row = 0; row < 6; row++) {
+    ^~~
+    VITIS_LOOP_40_1: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:10284:5: note: FIX-IT applied suggested code changes
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:10285:9: warning: Added loop label VITIS_LOOP_41_2:   [xilinx-label-all-loops]
+        for (int col = 0; col < 8; col++) {
+        ^~~
+        VITIS_LOOP_41_2: 
+C:\Users\adams\Documents\VHDL_projects\Vitis_HLS_FIR\sobel_hls\sobel_hls\hls\.autopilot\db\sobel.pp.0.cpp:10285:9: note: FIX-IT applied suggested code changes

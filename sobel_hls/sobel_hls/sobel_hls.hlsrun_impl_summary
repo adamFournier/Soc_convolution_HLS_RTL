@@ -1,0 +1,268 @@
+<ENTRY>
+{
+ "thisFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\sobel_hls.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "11/11/26 23:55:52",
+ "timestampMillis": "1794437752466",
+ "buildStep": {
+  "cmdId": "d9c64bb6-3830-463f-b791-922c855021c9",
+  "name": "vitis-run",
+  "logFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\logs\\sobel_hls.steps.log",
+  "commandLine": "C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\hls_config.cfg --work_dir sobel_hls ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\hls_config.cfg",
+   "--work_dir",
+   "sobel_hls"
+  ],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 23:55:52",
+ "timestampMillis": "1794437752468",
+ "status": {
+  "cmdId": "d9c64bb6-3830-463f-b791-922c855021c9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "11/11/26 23:56:04",
+ "timestampMillis": "1794437764999",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sobel_hls",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765002",
+ "buildStep": {
+  "cmdId": "cdba8018-9d0f-44de-b953-e3e2a0fc25b4",
+  "name": "",
+  "logFile": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "C:\\Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765004",
+ "status": {
+  "cmdId": "cdba8018-9d0f-44de-b953-e3e2a0fc25b4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765009",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765011",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\report\\verilog\\export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765012",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\report\\verilog\\export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765013",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765015",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\report\\verilog\\export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/11/26 23:56:05",
+ "timestampMillis": "1794437765016",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls\\impl\\report\\verilog\\export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/12/26 00:04:44",
+ "timestampMillis": "1794438284765",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/12/26 00:04:44",
+ "timestampMillis": "1794438284767",
+ "report": {
+  "path": "C:/Users\\adams\\Documents\\VHDL_projects\\Vitis_HLS_FIR\\sobel_hls\\sobel_hls\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/12/26 00:04:44",
+ "timestampMillis": "1794438284768",
+ "status": {
+  "cmdId": "cdba8018-9d0f-44de-b953-e3e2a0fc25b4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "11/12/26 00:04:45",
+ "timestampMillis": "1794438285056",
+ "status": {
+  "cmdId": "d9c64bb6-3830-463f-b791-922c855021c9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/12/26 00:04:45",
+ "timestampMillis": "1794438285060",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "11/12/26 00:04:45",
+ "timestampMillis": "1794438285060",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
