@@ -1,32 +1,59 @@
-# Sobel 3×3 — comparaison HLS / RTL sur SoC FPGA
+# Sobel Filter — HLS vs. RTL on FPGA
 
-Projet de traitement d'image en flux AXI4-Stream : comparaison entre une description **C++ HLS** et une implantation **VHDL RTL** du filtre de Sobel. Une variante de convolution configurable via AXI4-Lite est également conservée.
+A compact image-processing project comparing a handwritten **VHDL RTL** Sobel filter with a **C++ High-Level Synthesis (HLS)** implementation. A separate configurable 3 × 3 convolution core is included alongside these two versions.
 
-## Organisation
-- `sobel_hls/` : algorithme C++ pour Vitis HLS, testbench et script de reconstruction HLS.
-- `sobel_rtl/` : Sobel RTL en VHDL et testbenches AXI4-Stream.
-- `configurable_convolution/` : convolution 3×3 paramétrable, registres AXI4-Lite et tests.
-- `vivado/` : scripts de reconstruction de projets RTL et block design d'origine conservé à titre de référence.
-- `fir_hls/` : exercice FIR AXI4-Stream indépendant, conservé séparément pour ne pas perdre la source.
-- `results/` : protocole de comparaison HLS/RTL et emplacement des résultats vérifiés.
+## Repository layout
 
-## Fonctionnement du Sobel
-La version HLS et la version RTL traitent une image monochrome sur 8 bits, utilisent deux tampons de lignes et une fenêtre 3×3. Le calcul applique les opérateurs Sobel `Gx` et `Gy`, puis `min(255, abs(Gx)+abs(Gy))`.
+| Directory | Content |
+| --- | --- |
+| `sobel_hls/` | C++ Sobel implementation, testbench and Vitis HLS project script |
+| `sobel_rtl/` | Handwritten VHDL Sobel filter, AXI4-Stream testbenches and Vivado project script |
+| `configurable_convolution/` | Configurable 3 × 3 convolution, AXI4-Lite register interface, integration module, register testbench and Vivado project script |
 
-**Configuration de démonstration** : image 8 × 6 ; sortie 6 × 4, soit 24 pixels de fenêtre complète (sans bordure). AXI4-Stream : `TDATA`, `TVALID`, `TREADY` et `TLAST`.
+FIR examples, raw tool outputs, performance-result placeholders and unrelated Vivado project files are intentionally excluded from this working branch. Previous versions remain available in `backup-before-cleanup-2026-11-23`.
 
-## Reproduire les projets
-- **Vitis HLS** : depuis `sobel_hls/`, lancer le script `run_hls.tcl` (part cible `xc7z020clg484-1`, horloge cible 10 ns). Ouvrir Vitis HLS si votre version utilise une commande différente ; le script fourni n'a pas été réexécuté lors du nettoyage Git.
-- **Vivado RTL** : lancer `vivado -mode batch -source vivado/create_sobel_rtl.tcl` depuis la racine. Le script ajoute la source et le testbench Sobel. Le design AXI/PS original est conservé dans `vivado/reference_design_1.bd` à titre documentaire ; il peut nécessiter une reconstruction/repacquettisation des IP et des chemins avant son ouverture.
-- **Convolution paramétrable** : lancer `vivado -mode batch -source vivado/create_configurable_conv.tcl` depuis la racine.
+## Sobel architecture
 
-Les chemins ci-dessus sont conçus pour une exécution depuis la racine et supposent les outils Xilinx/AMD installés. Aucune commande de synthèse ou simulation n'a été exécutée lors de cette réorganisation distante.
+Both implementations apply the 3 × 3 horizontal and vertical Sobel kernels to an 8-bit grayscale image. Two line buffers and a sliding 3 × 3 window form the streaming datapath. The approximate gradient magnitude is `min(255, abs(Gx) + abs(Gy))`.
 
-## Tests
-`sobel_hls/tb_sobel.cpp` teste un motif 8 × 6 et vérifie les 24 pixels ainsi que `TLAST`. `sobel_rtl/tb_conv_filter.vhd` teste notamment les pauses et la contre-pression AXI-Stream. `sobel_rtl/tb_conv_filter_with_images.vhd` est une variante séparée du même type de test. `tb_conv_filter_image.vhd` attend un fichier externe `pixels.txt` correspondant à une image 320 × 240 ; ce fichier n'était pas présent dans le dépôt et le test n'est pas exécutable sans lui.
+The example uses **8 × 6 input pixels** and produces **6 × 4 output pixels**, retaining only complete 3 × 3 windows (no padded border). Both versions use an AXI4-Stream-style interface with `TDATA`, `TVALID`, `TREADY`, and `TLAST`.
 
-## État
-Sources HLS/RTL conservées ; résultats de performance non affirmés sans rapports comparables. Voir `results/README.md`.
+## Run the HLS implementation
 
-## Historique
-Une branche `backup-before-cleanup-2026-11-23` conserve intégralement l'ancien dépôt avant nettoyage. Les fichiers générés (cache HLS, dossiers de synthèse et simulation, logs) ont été retirés **du suivi Git de la branche de réorganisation**, sans intervention sur les répertoires locaux.
+Requirements: AMD/Xilinx Vitis HLS and the relevant Zynq-7000 device support.
+
+```bash
+vitis_hls -f sobel_hls/run_hls.tcl
+```
+
+The script creates an HLS project under `sobel_hls/project/`, selects `xc7z020clg484-1`, sets a **10 ns target clock**, runs C simulation and performs HLS synthesis. The HLS testbench checks the 24 expected output pixels and the final `TLAST`.
+
+## Run the handwritten RTL
+
+Requirements: AMD/Xilinx Vivado with VHDL-2008 simulation support.
+
+```bash
+vivado -mode batch -source sobel_rtl/run_vivado.tcl
+```
+
+The script creates a Vivado project under `sobel_rtl/project/` with `conv_filter.vhd` as synthesis top and `tb_conv_filter.vhd` as simulation top. To simulate in Vivado, open the generated project and run behavioral simulation. The separate `tb_conv_filter_with_images.vhd` is an alternative scenario-based testbench; `tb_conv_filter_image.vhd` requires an external `pixels.txt` image (320 × 240), which is not included.
+
+## Configurable convolution
+
+The independent `configurable_convolution/` implementation accepts an 8-bit pixel stream, provides 3 × 3 filter coefficients and image dimensions through an **AXI4-Lite register wrapper**, and produces an AXI4-Stream result.
+
+```bash
+vivado -mode batch -source configurable_convolution/run_vivado.tcl
+```
+
+This creates a minimal RTL project with `top_config_conv` as synthesis top and `tb_axi_lite_wrapper` as testbench. **The testbench tests the register wrapper only; it does not validate the complete configurable convolution datapath.**
+
+## Status and comparison
+
+The repository contains source code and testbenches; no fresh Vivado or Vitis HLS execution was performed as part of this GitHub reorganization. For a fair HLS-versus-RTL comparison, use matching image stimulus, target device, clock constraints, output conventions, and backpressure scenarios, then report **functional correctness, latency, initiation interval, throughput, LUTs, FFs, BRAMs and DSPs**. No synthesis figures or performance claims are provided without verified tool reports.
+
+## Notes
+
+- The original full Vivado project and all other files remain available in the backup branch.
+- Generated HLS/Vivado project directories and transient tool outputs are intentionally ignored by Git.
+- Scripts are supplied for reproducibility but still need to be run and checked locally.
