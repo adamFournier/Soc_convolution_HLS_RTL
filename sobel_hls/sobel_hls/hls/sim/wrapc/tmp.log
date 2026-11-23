@@ -1,6 +1,0 @@
-255 255 255 255 255 0 
-255 255 255 255 255 0 
-255 255 0 255 255 0 
-255 255 255 255 255 0 
-TEST PASSED
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 48

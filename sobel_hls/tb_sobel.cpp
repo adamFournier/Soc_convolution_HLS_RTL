@@ -23,13 +23,7 @@ int image_pixel(int row, int col) {
 
     int v = 40;
 
-    // Bord vertical
-    if (col >= 8)
-        v = 180;
-
-    // Bord horizontal
-    if (row >= 6)
-        v += 30;
+    // Image 8x6 : fond constant avec carre clair (sans conditions hors image).
 
     // Petit carre clair
     if (row >= 2 && row <= 4 &&
