@@ -48,12 +48,4 @@ vivado -mode batch -source configurable_convolution/run_vivado.tcl
 
 This creates a minimal RTL project with `top_config_conv` as synthesis top and `tb_axi_lite_wrapper` as testbench. **The testbench tests the register wrapper only; it does not validate the complete configurable convolution datapath.**
 
-## Status and comparison
 
-The repository contains source code and testbenches; no fresh Vivado or Vitis HLS execution was performed as part of this GitHub reorganization. For a fair HLS-versus-RTL comparison, use matching image stimulus, target device, clock constraints, output conventions, and backpressure scenarios, then report **functional correctness, latency, initiation interval, throughput, LUTs, FFs, BRAMs and DSPs**. No synthesis figures or performance claims are provided without verified tool reports.
-
-## Notes
-
-- The original full Vivado project and all other files remain available in the backup branch.
-- Generated HLS/Vivado project directories and transient tool outputs are intentionally ignored by Git.
-- Scripts are supplied for reproducibility but still need to be run and checked locally.
